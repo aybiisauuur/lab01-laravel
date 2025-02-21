@@ -27,6 +27,19 @@
             </div>
 
             <div class="mb-3">
+                <label for="inputName" class="form-label"><strong>Subject:</strong></label>
+                <input
+                    type="text"
+                    name="subject"
+                    class="form-control @error('title') is-invalid @enderror"
+                    id="inputName"
+                    placeholder="Title">
+                @error('name')
+                    <div class="form-text text-danger">{{ $message }}</div>
+                @enderror
+            </div>
+
+            <div class="mb-3">
                 <label for="inputcontent" class="form-label"><strong>content:</strong></label>
                 <textarea
                     class="form-control @error('content') is-invalid @enderror"
